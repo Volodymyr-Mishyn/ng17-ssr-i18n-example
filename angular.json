@@ -5,7 +5,7 @@
   "projects": {
     "ng17-ssr-i18n-example": {
       "i18n": {
-        "sourceLocale": "en-US",
+        "sourceLocale": { "code": "en-US", "baseHref": "/en/" },
         "locales": { "uk": "src/locale/messages.uk.xlf" }
       },
       "projectType": "application",
