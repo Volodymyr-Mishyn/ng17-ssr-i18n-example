@@ -13,8 +13,8 @@ Nevertheless, I came up with more clunky and basic solution with some minor disa
 ## Installation and running
 
 ```txt
- $ git clone
- $ cd ./
+ $ git clone https://github.com/Volodymyr-Mishyn/ng17-ssr-i18n-example.git
+ $ cd ng17-ssr-i18n-example
  $ npm install
 ```
 
