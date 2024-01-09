@@ -5,8 +5,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-first',
   standalone: true,
   imports: [CommonModule],
-  template: ` <h1>First page</h1>
-    <p>some first page information</p>`,
+  template: `<h1 i18n>First page</h1>
+    <p i18n>some first page information</p>`,
   styleUrl: './first.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

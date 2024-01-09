@@ -18,7 +18,7 @@ import { RegisterIconsService } from './services/register-icons.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public title = `SSR&i18n Angular application`;
+  public title = $localize`SSR&i18n Angular application`;
   public icon = 'assets/img/flag_with_trident.svg';
   constructor(private _registerIconsService: RegisterIconsService) {
     this._registerIconsService.registerIcons(['trident']);
