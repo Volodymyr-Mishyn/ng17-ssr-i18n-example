@@ -2,10 +2,6 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.
 
-## Live version
-
-[Deployed app](https://ng17-ssr-i18n-example-c28c66857a2c.herokuapp.com/)
-
 ## About
 
 This app was created for example purposes for anyone seeking how to make Angular built-in i18n and SSR work together simultaneously in production and dev environment.
@@ -59,7 +55,7 @@ To add SSR to an existing project
  $ ng add @angular/ssr
 ```
 
-Angular creates [server.ts](server.ts) file with Express.js for Server-Side Rendering (SSR)
+Angular creates `server.ts` file with Express.js for Server-Side Rendering (SSR)
 We will need to modify this file later, depending on our locales.
 
 ### Localizing your application
@@ -70,13 +66,13 @@ All information about preparing your application for i18n, extracting strings fo
 
 After preparing your files you'll have something like
 
-[messages.xlf](./src/locale/messages.xlf),
+messages.xlf,
 messages.{your-locale}.xlf,
-[messages.uk.xlf](./src/locale/messages.uk.xlf),
+messages.uk.xlf,
 
 #### Modifying angular.json and preparing dev environment
 
-Configure i18n in your [angular.json](angular.json)
+Configure i18n in your `angular.json`
 Provide your base locale and other locales you prepared
 
 ```json
@@ -136,7 +132,7 @@ Setup additional dev configuration for languages you want to serve with dev serv
 }
 ```
 
-Add script to run your preferred languages to your [package.json](package.json) for quality of life improvement:)
+Add script to run your preferred languages to your package.json for quality of life improvement:)
 
 ```json
  "scripts": {
@@ -147,7 +143,7 @@ Add script to run your preferred languages to your [package.json](package.json) 
 
 ### Making localized application work with SSR
 
-When Angular scaffolds ssr for your application it creates [server.ts](server.ts).
+When Angular scaffolds ssr for your application it creates `server.ts`.
 But after adding localization your `dist` folder will have another structure
 
 - browser/
@@ -159,7 +155,7 @@ But after adding localization your `dist` folder will have another structure
 - 3rdpartylicenses.txt
 - prerendered-routes.json
 
-but the [server.ts](server.ts) is generated without respecting this locales nested structure. So we have to make changes to it
+but the `server.ts` is generated without respecting this locales nested structure. So we have to make changes to it
 
 1. Modify app method to have locale parameter
 
