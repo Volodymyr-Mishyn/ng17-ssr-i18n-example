@@ -9,8 +9,8 @@ import { LOCALE_ID } from '@angular/core';
 
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(locale: string): express.Express {
-  console.log('LOCALE_ID', locale);
   const server = express();
+  // folders and files respecting locale
   const serverDistFolder = resolve(
     dirname(fileURLToPath(import.meta.url)),
     '../',
@@ -18,9 +18,8 @@ export function app(locale: string): express.Express {
   );
   const browserDistFolder = resolve(serverDistFolder, '../../browser/', locale);
   const indexHtml = join(serverDistFolder, 'index.server.html');
-  // console.log('serverDistFolder', serverDistFolder);
-  // console.log('browserDistFolder', browserDistFolder);
   console.log('indexHtml', indexHtml);
+
   const commonEngine = new CommonEngine();
 
   server.set('view engine', 'html');
@@ -44,6 +43,7 @@ export function app(locale: string): express.Express {
         publicPath: browserDistFolder + '/',
         providers: [
           { provide: APP_BASE_HREF, useValue: baseUrl },
+          //provide locale to the app
           { provide: LOCALE_ID, useValue: locale },
         ],
       })
@@ -61,6 +61,7 @@ function run(): void {
     const { headers, protocol } = req;
     res.redirect(`${protocol}://${headers.host}/en`);
   });
+  // different instance of express app for each locale
   server.use('/en', app('en-US'));
   server.use('/uk', app('uk'));
   server.get('*', (req, res) => {
