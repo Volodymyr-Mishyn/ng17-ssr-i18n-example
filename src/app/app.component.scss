@@ -1,0 +1,40 @@
+@mixin cursor-pointer {
+  cursor: pointer;
+}
+@mixin flex-start-center {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cursor-pointer {
+  @include cursor-pointer;
+}
+
+.active {
+  color: #ffd800;
+  background-color: #0056b9;
+}
+
+.navigation-bar {
+  @include flex-start-center;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+
+  & .home {
+    @include flex-start-center;
+  }
+  & .pages {
+    @include flex-start-center;
+
+    gap: 20px;
+    & .page-links {
+      margin-left: 16px;
+      @include flex-start-center;
+
+      gap: 8px;
+      .link {
+        @include cursor-pointer;
+      }
+    }
+  }
+}
