@@ -37,4 +37,19 @@
       }
     }
   }
+  & .lang-selector {
+    flex: 1;
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    & .lang {
+      @include cursor-pointer;
+      &.active-locale {
+        border-bottom: 1px solid #0056b9;
+        color: #0056b9;
+      }
+    }
+  }
 }

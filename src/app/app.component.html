@@ -17,5 +17,23 @@
       </div>
     </div>
   </div>
+  @if (isLanguageChangeAvailable()) {
+  <div class="lang-selector">
+    <div
+      class="lang"
+      (click)="changeLanguage('en')"
+      [class.active-locale]="activeLocale === 'en-US'"
+    >
+      en
+    </div>
+    <div
+      class="lang"
+      (click)="changeLanguage('uk')"
+      [class.active-locale]="activeLocale === 'uk'"
+    >
+      uk
+    </div>
+  </div>
+  }
 </div>
 <router-outlet></router-outlet>
