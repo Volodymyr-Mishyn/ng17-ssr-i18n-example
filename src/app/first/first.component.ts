@@ -6,7 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: `<h1 i18n>First page</h1>
-    <p i18n>some first page information</p>`,
+    <p i18n>some first page information</p>
+    <p i18n>change language to see translation in action</p>`,
   styleUrl: './first.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

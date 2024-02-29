@@ -6,7 +6,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   template: ` <h1 i18n>Second page</h1>
-    <p i18n>some second page information</p>`,
+    <p i18n>some second page information</p>
+    <p i18n>change language to see translation in action</p>`,
   styleUrl: './second.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

@@ -53,3 +53,14 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .navigation-bar {
+    & .pages {
+      flex-direction: column;
+    }
+    & .lang-selector {
+      flex-direction: column;
+    }
+  }
+}

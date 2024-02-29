@@ -1,0 +1,30 @@
+<h1 i18n>Russian losses in Ukraine</h1>
+<p>
+  <a href="https://russian-losses.in.ua/en/statistics/ministry-of-defense" i18n
+    >Example of production app built with this i18n+ssr approach</a
+  >
+</p>
+
+<div class="iframe-container">
+  <div *ngIf="isLoading" class="loader" i18n>Loading...</div>
+  <iframe
+    src="https://russian-losses.in.ua/en/statistics/ministry-of-defense"
+    frameborder="0"
+    (load)="iframeLoaded()"
+    allowfullscreen
+  ></iframe>
+</div>
+
+<div>
+  <p i18n>
+    You can change the language of application in the bottom left of side-nav
+    component
+  </p>
+  <div>
+    <img
+      src="assets/img/change-language.png"
+      alt="language change"
+      style="height: 240px; width: auto"
+    />
+  </div>
+</div>

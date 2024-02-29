@@ -8,6 +8,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "localize": "ng extract-i18n --output-path src/locale --format xlf",
     "serve:ssr:ng17-ssr-i18n-example": "node dist/ng17-ssr-i18n-example/server/en-US/server.mjs"
   },
   "private": true,

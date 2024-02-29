@@ -9,6 +9,9 @@
       {{ title }}
     </div>
     <div class="page-links">
+      <div [routerLink]="['/live-app']" routerLinkActive="active" class="link">
+        <span i18n>Live application</span>
+      </div>
       <div [routerLink]="['/first']" routerLinkActive="active" class="link">
         <span i18n>First page</span>
       </div>
